@@ -5,7 +5,7 @@ import {
   RouterStateSnapshot
 } from "@angular/router";
 import { Observable } from "rxjs/Observable";
-import { ServersService } from "./servers.service";
+import { ServersService } from "../servers.service";
 
 interface Server {
   id: number;
@@ -13,9 +13,9 @@ interface Server {
   status: string;
 }
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable(
+  // {providedIn: 'root'}
+  )
 export class ServerResolver implements Resolve<Server> {
   constructor(private servesrService: ServersService) {}
 
